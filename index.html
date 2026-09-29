@@ -34,7 +34,7 @@
           <h1 class="hero-title" data-hero><span class="ht-a" data-chars>Genomes</span><span class="ht-b">and their evolution</span></h1>
           <div class="hero-top mono"><span>Biology in Focus · Unit 2 · Genetics · Chapter 18</span></div>
           <div class="hero-foot mono">
-            <span>A scroll film in eleven chapters · every number from the textbook</span>
+            <span>A scroll film in eleven chapters · 30 questions along the way · a final quiz</span>
             <span class="cue"><i></i>Scroll</span>
           </div>
           <div class="beats">
@@ -61,7 +61,7 @@
       </section>
 
       <!-- 01 · READING THE GENOME (18.1) -------------------------------------------->
-      <section id="ch1" class="chapter" data-f0="1" data-f1="2" style="--h: 900vh" data-world="lab">
+      <section id="ch1" class="chapter" data-f0="1" data-f1="2" style="--h: 1000vh" data-world="lab">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.1</span><h2 class="ch-title" data-chars>Reading the genome</h2></header>
           <div class="beats">
@@ -93,8 +93,8 @@
               <h3>Why are the fragments shown scattered, not in order?</h3>
               <ol class="opts">
                 <li><button>Because they are sorted by size before cloning</button></li>
-                <li><button data-ok>After cutting, nothing records where each piece came from</button></li>
                 <li><button>Because each vector holds several fragments</button></li>
+                <li><button data-ok>After cutting, nothing records where each piece came from</button></li>
               </ol>
               <p class="why">Right: the cut is random, so a fragment's position is lost. Only the overlaps between fragments can put the order back.</p>
             </article>
@@ -104,11 +104,21 @@
               <p>Every fragment is <b class="k" data-k="reads">sequenced</b> on its own. Three of them, straight from Figure 18.2:</p>
               <p class="seqs mono"><span>CGCCATCAGT</span><span>AGTCCGCTATACGA</span><span>ACGATACTGGT</span></p>
             </article>
-            <article class="beat" data-at="0.56,0.7">
+            <article class="beat" data-at="0.56,0.66">
               <p class="eyebrow mono">Step 4 · order by overlap</p>
               <h3>Software stitches them back together.</h3>
               <p>Computer programs find where the end of one read matches the start of another, then line up thousands of overlapping reads into one <b class="k" data-k="consensus">continuous sequence</b>.</p>
               <p class="seqs mono con"><span>…CGCCATCAGTCCGCTATACGATACTGGT…</span></p>
+            </article>
+            <article class="beat predict" data-at="0.66,0.7" data-q="copies">
+              <p class="eyebrow mono">Check · 18.1</p>
+              <h3>Why cut many copies of the DNA instead of just one?</h3>
+              <ol class="opts">
+                <li><button data-ok>So the fragments overlap, and the overlaps reveal their order</button></li>
+                <li><button>So each fragment can be cloned in a different vector</button></li>
+                <li><button>So errors in one copy cancel out the others</button></li>
+              </ol>
+              <p class="why">Right: every copy breaks in different places. Without overlapping fragments, software could never tell which piece follows which.</p>
             </article>
             <article class="beat" data-at="0.7,0.84">
               <p class="eyebrow mono">Faster, cheaper</p>
@@ -116,16 +126,26 @@
               <p>A 1980s lab read about 1,000 base pairs a day; by 2000, 1,000 a second; by 2018 the best machines read nearly 35 million a second. <b>Sequencing by synthesis</b> reads millions of ~300-bp fragments at once, with no cloning step.</p>
               <p class="note">The first human genome: 13 years and $100 million. In 2007 one person's: 4 months, about $1 million. By 2018: a day or less, about $1,000.</p>
             </article>
-            <article class="beat" data-at="0.84,0.93">
+            <article class="beat" data-at="0.84,0.9">
               <p class="eyebrow mono">Metagenomics</p>
               <h3>Sequence a whole community at once.</h3>
               <p>In <b class="k" data-k="meta">metagenomics</b>, DNA from every species in an environmental sample is collected and sequenced together; software sorts the partial sequences into individual genomes.</p>
               <p class="note">No need to grow each species in the lab: most microbes can't be cultured at all.</p>
             </article>
-            <article class="beat" data-at="0.93,1">
+            <article class="beat" data-at="0.9,0.95">
               <p class="eyebrow mono">2018 · the contents of cow rumens</p>
               <h3>913 genomes out of one soup.</h3>
               <p>Researchers sequenced DNA from cow rumens and assembled <b>913 microbial genomes</b>, finding over <b>60,000 genes</b> for carbohydrate digestion that had never been identified.</p>
+            </article>
+            <article class="beat predict" data-at="0.95,1" data-q="meta">
+              <p class="eyebrow mono">Check · 18.1</p>
+              <h3>What makes metagenomics different from sequencing one species?</h3>
+              <ol class="opts">
+                <li><button>It only sequences genes, not whole genomes</button></li>
+                <li><button data-ok>It sequences DNA from a whole community without growing each species separately</button></li>
+                <li><button>It uses cloning instead of sequencing machines</button></li>
+              </ol>
+              <p class="why">Right: DNA from the whole sample is sequenced together and software sorts it into genomes, so microbes that can't be cultured can still be studied.</p>
             </article>
           </div>
           <aside class="takeaway" data-take="0.965,1" aria-label="Takeaway">
@@ -136,7 +156,7 @@
       </section>
 
       <!-- 02 · BIOINFORMATICS (18.2) ---------------------------------------------------->
-      <section id="ch2" class="chapter" data-f0="2" data-f1="3" style="--h: 820vh">
+      <section id="ch2" class="chapter" data-f0="2" data-f1="3" style="--h: 920vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.2</span><h2 class="ch-title" data-chars>Bioinformatics</h2></header>
           <div class="beats">
@@ -150,8 +170,8 @@
               <p class="eyebrow mono">Predict · your first bioinformatics move</p>
               <h3>You've sequenced a gene no one has studied. Fastest clue to its function?</h3>
               <ol class="opts">
-                <li><button data-ok>Search the databases for similar sequences of known function</button></li>
                 <li><button>Count how many A's and T's it contains</button></li>
+                <li><button data-ok>Search the databases for similar sequences of known function</button></li>
                 <li><button>Measure the length of its introns</button></li>
               </ol>
               <p class="why">Right: a program like BLAST aligns your sequence against millions of others. Similar sequence usually means similar function, because similar genes share ancestry.</p>
@@ -162,13 +182,23 @@
               <p><b class="k" data-k="blast">BLAST</b> slides your query along database sequences and scores the matches. A protein's predicted amino acid sequence is compared too: amino acids can match even where the DNA has drifted.</p>
               <p class="note">This is how most genes in a new genome are first given a likely function.</p>
             </article>
-            <article class="beat" data-at="0.3,0.44">
+            <article class="beat" data-at="0.3,0.4">
               <p class="eyebrow mono">Understanding protein-coding genes</p>
               <h3>Where does a gene start?</h3>
               <p>Software scans a raw sequence for the signatures of genes: <b class="k" data-k="start">start</b> and <b class="k" data-k="stop">stop</b> codons, RNA-splicing sites, and evidence that the region is actually <b class="k" data-k="rnaseq">transcribed into RNA</b>.</p>
               <p class="note">A genome browser stacks this evidence as tracks: here, one gene's five exons with its RNA piling up over them.</p>
             </article>
-            <article class="beat fieldnote" data-at="0.44,0.58">
+            <article class="beat predict" data-at="0.4,0.45" data-q="genefind">
+              <p class="eyebrow mono">Check · 18.2</p>
+              <h3>Which is evidence that a stretch of DNA is a protein-coding gene?</h3>
+              <ol class="opts">
+                <li><button>It is made mostly of short tandem repeats</button></li>
+                <li><button>It is found near a telomere</button></li>
+                <li><button data-ok>It has start and stop codons, splice sites, and is transcribed into RNA</button></li>
+              </ol>
+              <p class="why">Right: gene-finding software looks for exactly these signals, and RNA evidence shows the region is actually used.</p>
+            </article>
+            <article class="beat fieldnote" data-at="0.45,0.58">
               <p class="eyebrow mono">Field note · <i>Ciona robusta</i></p>
               <h3>Two sea squirts, one secret switch.</h3>
               <p>Compare the genomes of two <i>Ciona</i> species and most noncoding DNA has drifted apart, but some blocks stay nearly identical. Those <b class="k" data-k="enh">conserved noncoding</b> blocks often turn out to be <b>enhancers</b>: switches that control when a gene turns on.</p>
@@ -179,10 +209,20 @@
               <h3>When nothing matches, break it.</h3>
               <p>For a gene with no known relative, researchers disable it and watch what goes wrong in the organism. Biochemical and functional studies fill in the rest.</p>
             </article>
-            <article class="beat" data-at="0.66,0.8">
+            <article class="beat" data-at="0.66,0.76">
               <p class="eyebrow mono">The systems level</p>
               <h3>Genes work in networks.</h3>
               <p><b class="k" data-k="proteomics">Proteomics</b> studies the full set of proteins a genome encodes (its proteome). <b class="k" data-k="systems">Systems biology</b> models the behaviour of whole systems from the interactions among their parts, like this map of yeast proteins, coloured by the cell function each cluster serves.</p>
+            </article>
+            <article class="beat predict" data-at="0.76,0.8" data-q="systems">
+              <p class="eyebrow mono">Check · 18.2</p>
+              <h3>Systems biology tries to…</h3>
+              <ol class="opts">
+                <li><button data-ok>Model how a whole system behaves from the interactions among its parts</button></li>
+                <li><button>Study one gene at a time in isolation</button></li>
+                <li><button>Sequence genomes faster</button></li>
+              </ol>
+              <p class="why">Right: it studies networks of genes and proteins as a whole. That's why a systems approach suits a disease like cancer, where many genes change together.</p>
             </article>
             <article class="beat" data-at="0.8,0.92">
               <p class="eyebrow mono">2003 · ENCODE</p>
@@ -208,7 +248,7 @@
       </section>
 
       <!-- 03 · SIZE IS NOT COMPLEXITY (18.3) ------------------------------------------>
-      <section id="ch3" class="chapter" data-f0="3" data-f1="4" style="--h: 760vh">
+      <section id="ch3" class="chapter" data-f0="3" data-f1="4" style="--h: 840vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.3</span><h2 class="ch-title" data-chars>Size is not complexity</h2></header>
           <div class="beats">
@@ -216,9 +256,9 @@
               <p class="eyebrow mono">Predict</p>
               <h3>Which has the largest genome?</h3>
               <ol class="opts">
+                <li><button data-ok>A Japanese canopy plant</button></li>
                 <li><button>A human</button></li>
                 <li><button>An ear of corn</button></li>
-                <li><button data-ok>A Japanese canopy plant</button></li>
               </ol>
               <p class="why">Right: <i>Paris japonica</i> has about 149,000 Mb, roughly 50 times a human's 3,000 Mb.</p>
             </article>
@@ -233,8 +273,8 @@
               <h3>Who has more genes: you, or an ear of corn?</h3>
               <ol class="opts">
                 <li><button>You, by far</button></li>
-                <li><button data-ok>The corn</button></li>
                 <li><button>About the same</button></li>
+                <li><button data-ok>The corn</button></li>
               </ol>
               <p class="why">Right: corn has about 32,000 genes; humans fewer than 21,000, about as many as a 1-mm nematode worm.</p>
             </article>
@@ -243,15 +283,25 @@
               <h3>More DNA doesn't mean more genes.</h3>
               <p>Free-living bacteria and archaea have 1,500–7,500 genes; unicellular fungi about 5,000; multicellular eukaryotes up to at least 40,000. The <b class="k" data-k="worm">nematode</b> (<i>C. elegans</i>, 100 Mb) has about <b>20,100</b> genes; the <b class="k" data-k="fly">fruit fly</b> (165 Mb) only about <b>14,000</b>.</p>
             </article>
-            <article class="beat" data-at="0.58,0.78">
+            <article class="beat" data-at="0.58,0.76">
               <p class="eyebrow mono">Gene density</p>
               <h3>A bacterium is almost all genes.</h3>
               <p>Each bar is one million base pairs. <i>E. coli</i> packs about <b>950</b> genes into it; a human, about <b>7</b>. Mammals have the lowest gene density known: long introns and vast noncoding DNA between genes.</p>
             </article>
-            <article class="beat" data-at="0.78,1">
+            <article class="beat" data-at="0.76,0.92">
               <p class="eyebrow mono">Alternative splicing</p>
               <h3>One gene, several proteins.</h3>
               <p>How do so few genes build a human? In vertebrates most genes can be spliced more than one way: <b class="k" data-k="splice">alternative splicing</b> keeps different combinations of exons, so one gene yields several different polypeptides.</p>
+            </article>
+            <article class="beat predict" data-at="0.92,1" data-q="splice">
+              <p class="eyebrow mono">Check · 18.3</p>
+              <h3>Humans have fewer than 21,000 genes but make far more kinds of polypeptides. The main reason?</h3>
+              <ol class="opts">
+                <li><button>Each gene has several copies</button></li>
+                <li><button data-ok>Alternative splicing joins different combinations of exons</button></li>
+                <li><button>Most proteins are made from rRNA genes</button></li>
+              </ol>
+              <p class="why">Right: one gene can be spliced several ways, so vertebrates get more than one polypeptide from many genes.</p>
             </article>
           </div>
           <aside class="inst inst-table" data-inst="0.1,0.78" aria-label="Table 18.1">
@@ -267,53 +317,83 @@
       </section>
 
       <!-- 04 · WHAT A GENOME HOLDS (18.4) ---------------------------------------------->
-      <section id="ch4" class="chapter" data-f0="4" data-f1="5" style="--h: 780vh">
+      <section id="ch4" class="chapter" data-f0="4" data-f1="5" style="--h: 980vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.4</span><h2 class="ch-title" data-chars>What a genome holds</h2></header>
           <div class="beats">
             <article class="beat" data-at="0,0.08">
               <p class="eyebrow mono">The human genome, end to end</p>
               <h3>Three billion letters, laid out.</h3>
-              <p>Every colour is a kind of DNA, in its true proportion.</p>
+              <p>Every colour is a kind of DNA sequence, in its true proportion of the human genome. Multicellular eukaryotes carry far more noncoding DNA than bacteria do, and far more repeats.</p>
             </article>
-            <article class="beat predict" data-at="0.08,0.16" data-q="coding">
+            <article class="beat predict" data-at="0.08,0.15" data-q="coding">
               <p class="eyebrow mono">Predict</p>
               <h3>How much of it codes for proteins?</h3>
               <ol class="opts">
                 <li><button>About half</button></li>
-                <li><button>About a quarter</button></li>
                 <li><button data-ok>About 1.5%</button></li>
+                <li><button>About a quarter</button></li>
               </ol>
               <p class="why">Right: exons are about 1.5%. The other 98.5% doesn't code for proteins, rRNAs or tRNAs.</p>
             </article>
-            <article class="beat" data-at="0.16,0.3">
+            <article class="beat" data-at="0.15,0.26">
               <p class="eyebrow mono">Types of DNA sequences · Figure 18.5</p>
               <h3>1.5% codes for protein.</h3>
-              <p>Only the <b class="k" data-k="exon">exons</b> are protein-coding. The rest was once called “junk DNA”, but much of it is conserved across species and is transcribed, which argues that it matters.</p>
+              <p>Only the <b class="k" data-k="exon">exons</b> are protein-coding. The rest was once dismissed as “junk DNA”, but much of it is conserved across species and much of it is transcribed, which argues strongly that it matters.</p>
+              <p class="note">Sequences that natural selection keeps unchanged over millions of years are almost certainly doing something.</p>
             </article>
-            <article class="beat" data-at="0.3,0.5">
-              <p class="eyebrow mono">Noncoding, but not idle</p>
-              <h3>Introns, switches and fossils.</h3>
-              <p>About a quarter of the genome is <b class="k" data-k="intron">introns</b> and gene-related <b class="k" data-k="reg">regulatory sequences</b>. Between genes lies intergenic DNA, including <b>pseudogenes</b> (former genes that have accumulated mutations and no longer work) and 15% <b class="k" data-k="unique">unique noncoding DNA</b>.</p>
+            <article class="beat" data-at="0.26,0.36">
+              <p class="eyebrow mono">Introns and regulatory sequences · about a quarter</p>
+              <h3>Inside genes and beside them.</h3>
+              <p><b class="k" data-k="intron">Introns</b> (about 20%) sit inside genes and are spliced out of the RNA. <b class="k" data-k="reg">Regulatory sequences</b> (about 5%) such as enhancers and promoters control when and where each gene is transcribed. Together, gene-related noncoding DNA is about a quarter of the genome.</p>
+            </article>
+            <article class="beat" data-at="0.36,0.44">
+              <p class="eyebrow mono">Intergenic DNA · pseudogenes · unique noncoding DNA</p>
+              <h3>The DNA between genes.</h3>
+              <p>Noncoding DNA between genes is <b>intergenic DNA</b>. Some of it is <b>pseudogenes</b>: former genes that have accumulated mutations over time and no longer produce a working product. About 15% is <b class="k" data-k="unique">unique noncoding DNA</b>, present in a single copy, whose function is mostly unknown.</p>
+            </article>
+            <article class="beat predict" data-at="0.44,0.5" data-q="pseudo">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>What is a pseudogene?</h3>
+              <ol class="opts">
+                <li><button data-ok>A former gene whose mutations mean it no longer works</button></li>
+                <li><button>A gene that is only expressed in the embryo</button></li>
+                <li><button>A short sequence repeated thousands of times</button></li>
+              </ol>
+              <p class="why">Right: a pseudogene is the fossil of a gene. It still looks like one, but mutations have disabled it.</p>
             </article>
             <article class="beat" data-at="0.5,0.58">
-              <p class="eyebrow mono">Repetitive DNA</p>
+              <p class="eyebrow mono">Repetitive DNA · about half the genome</p>
               <h3>Over half of us is repeats.</h3>
-              <p><b class="k" data-k="te">Repetitive DNA</b> is present in multiple copies. About three-quarters of it is <b>transposable elements</b> and related sequences (44% of the genome); the other 14% arose from errors in replication or recombination.</p>
+              <p><b class="k" data-k="te">Repetitive DNA</b> is any sequence present in multiple copies. About three-quarters of it is <b>transposable elements</b> and related sequences: 44% of the whole genome. The other 14% arose from mistakes during DNA replication or recombination.</p>
             </article>
-            <article class="beat" data-at="0.58,0.78">
-              <p class="eyebrow mono">Simple sequence DNA · STRs</p>
+            <article class="beat" data-at="0.58,0.68">
+              <p class="eyebrow mono">Simple sequence DNA · short tandem repeats</p>
               <h3>Stutters that make you unique.</h3>
-              <p><b class="k" data-k="str">Simple sequence DNA</b> is many copies of a short unit in tandem. When the unit is 2–5 nucleotides it's a <b>short tandem repeat (STR)</b>. The number of repeats varies from person to person, giving each a unique <b class="k" data-k="profile">genetic profile</b>, used in forensics.</p>
-              <p class="note">Much simple sequence DNA sits at centromeres and telomeres, where it's structural. A third of the 14% is large-segment duplications (5–6%), copied from one region to another.</p>
+              <p><b class="k" data-k="str">Simple sequence DNA</b> is many copies of a short unit in tandem, like GTTACGTTACGTTAC… When the unit is 2–5 nucleotides it's a <b>short tandem repeat (STR)</b>. The number of repeats at a site varies from person to person, so a set of STRs gives each person a unique <b class="k" data-k="profile">genetic profile</b>.</p>
             </article>
-            <article class="beat" data-at="0.8,1">
+            <article class="beat predict" data-at="0.68,0.74" data-q="str">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>Why are STRs so useful for identifying people?</h3>
+              <ol class="opts">
+                <li><button>They code for proteins that differ between people</button></li>
+                <li><button>They are found only in the Y chromosome</button></li>
+                <li><button data-ok>The number of repeats at each site varies between individuals</button></li>
+              </ol>
+              <p class="why">Right: two people rarely share the same repeat counts at many STR sites at once, which is why forensic labs compare them.</p>
+            </article>
+            <article class="beat" data-at="0.74,0.82">
+              <p class="eyebrow mono">Where the repeats sit</p>
+              <h3>Structure, and copies of copies.</h3>
+              <p>Much simple sequence DNA sits at <b>centromeres</b> and <b>telomeres</b>, where it plays a structural role: organising chromatin and protecting chromosome ends. About a third of the 14% is <b>large-segment duplications</b> (5–6%): long stretches copied from one chromosomal region to another.</p>
+            </article>
+            <article class="beat" data-at="0.82,1">
               <p class="eyebrow mono">Next · the notebook</p>
               <h3>The biggest slice moves.</h3>
-              <p>That 44% is made of DNA that copies itself from place to place. The first person to see it happen did so decades before anyone knew genes were DNA.</p>
+              <p>That 44% is DNA that copies itself from place to place. The first person to see it happen did so decades before anyone knew genes were made of DNA.</p>
             </article>
           </div>
-          <aside class="takeaway" data-take="0.74,0.8" aria-label="Takeaway">
+          <aside class="takeaway" data-take="0.76,0.82" aria-label="Takeaway">
             <p class="tk-h mono">Takeaway · 18.4 (part 1)</p>
             <ol><li><span>Exons: 1.5%; introns + regulatory: ~¼; the rest intergenic.</span></li><li><span>Repetitive DNA ≈ half; transposable elements ≈ 44%.</span></li><li><span>STRs (2–5-nt units) vary between people: genetic profiles.</span></li></ol>
           </aside>
@@ -321,46 +401,77 @@
       </section>
 
       <!-- 05 · JUMPING GENES (18.4) -------------------------------------------------------->
-      <section id="ch5" class="chapter" data-f0="5" data-f1="6" style="--h: 820vh">
+      <section id="ch5" class="chapter" data-f0="5" data-f1="6" style="--h: 1020vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.4</span><h2 class="ch-title" data-chars>Jumping genes</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.14">
+            <article class="beat" data-at="0,0.1">
               <p class="eyebrow mono">Barbara McClintock · Indian corn · Figure 18.6</p>
               <h3>Speckled kernels, moving genes.</h3>
               <p>Breeding corn in the 1940s and '50s, <b class="k" data-k="mcclintock">Barbara McClintock</b> saw kernel colours change in ways that only made sense if pieces of DNA were moving into and out of the genes for pigment. She was awarded the Nobel Prize in 1983.</p>
-              <p class="note">Each spot is a clone of cells where the element jumped back out and colour returned.</p>
+              <p class="note">An element that jumps into a pigment gene switches it off; where it jumps back out in one cell, colour returns in that cell's descendants: a spot.</p>
             </article>
-            <article class="beat" data-at="0.14,0.24">
+            <article class="beat predict" data-at="0.1,0.16" data-q="mcclintock">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>What explained the mottled kernels?</h3>
+              <ol class="opts">
+                <li><button>Mutations caused by sunlight on the ear</button></li>
+                <li><button data-ok>DNA elements moving into and out of pigment genes</button></li>
+                <li><button>Cross-pollination between yellow and purple plants</button></li>
+              </ol>
+              <p class="why">Right: transposable elements. When one sits inside a pigment gene the gene is disrupted; when it leaves, colour comes back.</p>
+            </article>
+            <article class="beat" data-at="0.16,0.24">
               <p class="eyebrow mono">Into one kernel</p>
               <h3>Transposable elements.</h3>
-              <p><b class="k" data-k="te-dna">Transposable elements</b> move from one site in a cell's DNA to another. They're found in both prokaryotes and eukaryotes, and they come in two kinds.</p>
+              <p><b class="k" data-k="te-dna">Transposable elements</b> are stretches of DNA that can move from one site in a cell's DNA to another. They're found in both prokaryotes and eukaryotes, and they come in two kinds, told apart by how they move.</p>
             </article>
-            <article class="beat" data-at="0.24,0.5">
-              <p class="eyebrow mono">Transposons · Figure 18.7</p>
-              <h3>Cut and paste. Or copy and paste.</h3>
-              <p>A <b class="k" data-k="transposon">transposon</b> moves through a DNA intermediate. An enzyme, <b class="k" data-k="transposase">transposase</b>, cuts it out and inserts it at a new site (“cut and paste”) or copies it first and leaves the original behind (“copy and paste”).</p>
+            <article class="beat" data-at="0.24,0.37">
+              <p class="eyebrow mono">Transposons · cut and paste · Figure 18.7</p>
+              <h3>Cut it out, paste it in.</h3>
+              <p>A <b class="k" data-k="transposon">transposon</b> moves through a DNA intermediate. An enzyme, <b class="k" data-k="transposase">transposase</b>, which the transposon itself usually encodes, cuts it out of its old site and inserts it at a new one. The gap left behind is repaired.</p>
+            </article>
+            <article class="beat" data-at="0.37,0.5">
+              <p class="eyebrow mono">Transposons · copy and paste</p>
+              <h3>Or copy it, and paste the copy.</h3>
+              <p>Some transposons are replicated first: the original stays where it was and the new copy is inserted somewhere else. Either way, the element is <b>DNA the whole time</b>.</p>
+              <p class="note">Wherever it lands, it can disrupt a gene or change how nearby genes are expressed.</p>
             </article>
             <article class="beat predict" data-at="0.5,0.56" data-q="retro">
               <p class="eyebrow mono">Predict · Concept Check</p>
               <h3>Which kind of element always leaves a copy at the original site?</h3>
               <ol class="opts">
                 <li><button>Cut-and-paste transposons</button></li>
+                <li><button>Neither kind</button></li>
                 <li><button data-ok>Retrotransposons</button></li>
-                <li><button>Neither</button></li>
               </ol>
-              <p class="why">Right: a retrotransposon is copied into RNA first; the original stays put and a new DNA copy is inserted elsewhere.</p>
+              <p class="why">Right: a retrotransposon is copied into RNA first; the original never leaves, and a new DNA copy is inserted elsewhere.</p>
             </article>
-            <article class="beat" data-at="0.56,0.8">
+            <article class="beat" data-at="0.56,0.72">
               <p class="eyebrow mono">Retrotransposons · Figure 18.8</p>
               <h3>Through RNA and back.</h3>
-              <p>A <b class="k" data-k="retro">retrotransposon</b> is transcribed into an RNA intermediate; <b class="k" data-k="rt">reverse transcriptase</b> (which it encodes) turns the RNA back into DNA, and the new copy inserts at another site. The original never leaves.</p>
-              <p class="note">That's why they pile up: every jump adds a copy.</p>
+              <p>A <b class="k" data-k="retro">retrotransposon</b> is transcribed into an <b>RNA intermediate</b>. <b class="k" data-k="rt">Reverse transcriptase</b>, which the retrotransposon encodes, copies that RNA back into DNA, and the new DNA copy inserts at another site. The original never leaves.</p>
+              <p class="note">That's why they pile up: every jump adds a copy. Most of the 44% is retrotransposons.</p>
             </article>
-            <article class="beat" data-at="0.8,1">
+            <article class="beat predict" data-at="0.72,0.78" data-q="rt">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>What does reverse transcriptase make?</h3>
+              <ol class="opts">
+                <li><button data-ok>DNA, copied from an RNA template</button></li>
+                <li><button>RNA, copied from a DNA template</button></li>
+                <li><button>Protein, read from an RNA template</button></li>
+              </ol>
+              <p class="why">Right: it runs the usual flow backwards, RNA → DNA. That's what lets a retrotransposon's RNA become a new DNA copy.</p>
+            </article>
+            <article class="beat" data-at="0.78,0.9">
               <p class="eyebrow mono">Alu and L1</p>
               <h3>A tenth of you is one sequence.</h3>
-              <p><b class="k" data-k="alu">Alu elements</b>, about 300 nucleotides long, make up about <b>10%</b> of the human genome; many are transcribed, though any function is unknown. <b class="k" data-k="l1">L1</b> retrotransposons are about <b>17%</b>; they rarely move, and may help regulate gene expression.</p>
+              <p><b class="k" data-k="alu">Alu elements</b>, about 300 nucleotides long, make up about <b>10%</b> of the human genome; many are transcribed into RNA, though any function is unknown. <b class="k" data-k="l1">L1</b> (LINE-1) retrotransposons are about <b>17%</b>; they rarely move, and may help regulate gene expression.</p>
+            </article>
+            <article class="beat" data-at="0.9,1">
+              <p class="eyebrow mono">Why they matter</p>
+              <h3>Parasites, or raw material?</h3>
+              <p>Transposable elements can break genes, switch them on or off, and shuffle DNA around. Mostly harmful, occasionally useful: in 18.5 they turn out to be one of the engines of genome evolution.</p>
             </article>
           </div>
           <aside class="takeaway" data-take="0.965,1" aria-label="Takeaway">
@@ -371,27 +482,52 @@
       </section>
 
       <!-- 06 · GENE FAMILIES (18.4) ------------------------------------------------------->
-      <section id="ch6" class="chapter" data-f0="6" data-f1="7" style="--h: 780vh">
+      <section id="ch6" class="chapter" data-f0="6" data-f1="7" style="--h: 980vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.4</span><h2 class="ch-title" data-chars>Gene families</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.22">
+            <article class="beat" data-at="0,0.14">
               <p class="eyebrow mono">Identical genes · Figure 18.9a</p>
               <h3>Hundreds of copies, side by side.</h3>
-              <p>Most genes are single-copy, but <b>multigene families</b> are collections of identical or very similar genes. The <b class="k" data-k="rrna">ribosomal RNA genes</b> repeat in tandem, each unit transcribed into one RNA later cut into <b>18S, 5.8S and 28S</b> rRNAs, separated by nontranscribed spacer DNA.</p>
-              <p class="note">Why so many identical copies? A cell needs millions of ribosomes; one gene can't make rRNA fast enough. Each “tree” is one unit being transcribed by many polymerases at once.</p>
+              <p>Most genes are single-copy, but <b>multigene families</b> are collections of two or more identical or very similar genes. The <b class="k" data-k="rrna">ribosomal RNA genes</b> repeat in tandem, hundreds to thousands of times. Each unit is transcribed into one RNA that is cut into <b>18S, 5.8S and 28S</b> rRNAs; units are separated by nontranscribed spacer DNA.</p>
+              <p class="note">Each “tree” is one unit being transcribed by many RNA polymerases at once: the longest branches are the most complete transcripts.</p>
             </article>
-            <article class="beat" data-at="0.22,0.46">
+            <article class="beat predict" data-at="0.14,0.2" data-q="rrna">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>Why keep so many identical rRNA genes?</h3>
+              <ol class="opts">
+                <li><button>Each copy makes a different kind of ribosome</button></li>
+                <li><button>Extra copies protect the chromosome ends</button></li>
+                <li><button data-ok>A cell needs enormous numbers of ribosomes, fast</button></li>
+              </ol>
+              <p class="why">Right: rRNA is the main component of ribosomes and isn't translated, so the only way to make it faster is more genes transcribing at once.</p>
+            </article>
+            <article class="beat" data-at="0.2,0.34">
               <p class="eyebrow mono">Nonidentical genes · Figure 18.9b</p>
               <h3>Globins: two families, two chromosomes.</h3>
-              <p>The <b class="k" data-k="alpha">α-globin family</b> sits on chromosome 16, the <b class="k" data-k="beta">β-globin family</b> on chromosome 11. Scattered among the working genes are <b class="k" data-k="pseudo">pseudogenes (ψ)</b>: copies that mutated into silence.</p>
+              <p>The <b class="k" data-k="alpha">α-globin family</b> sits on <b>chromosome 16</b>, the <b class="k" data-k="beta">β-globin family</b> on <b>chromosome 11</b>. Members of each family are similar but not identical, and are expressed at different times in development. Scattered among the working genes are <b class="k" data-k="pseudo">pseudogenes (ψ)</b>.</p>
             </article>
-            <article class="beat" data-at="0.46,0.66">
+            <article class="beat predict" data-at="0.34,0.4" data-q="globinchr">
+              <p class="eyebrow mono">Check · 18.4</p>
+              <h3>Where are the α- and β-globin genes?</h3>
+              <ol class="opts">
+                <li><button>Side by side in one cluster on chromosome 11</button></li>
+                <li><button data-ok>In two families, on chromosomes 16 and 11</button></li>
+                <li><button>Scattered one per chromosome across the genome</button></li>
+              </ol>
+              <p class="why">Right: α family on 16, β family on 11. Each family is a cluster of related genes and pseudogenes.</p>
+            </article>
+            <article class="beat" data-at="0.4,0.46">
+              <p class="eyebrow mono">Where families come from</p>
+              <h3>Copies that drifted apart.</h3>
+              <p>Nonidentical families arise when a gene is duplicated and the copies then accumulate different mutations. Some copies gain slightly different jobs; some lose function and become pseudogenes. In 18.5 you'll watch the globin families grow from a single ancestor.</p>
+            </article>
+            <article class="beat" data-at="0.46,0.62">
               <p class="eyebrow mono">Hemoglobin</p>
               <h3>Two α-type chains, two β-type chains.</h3>
-              <p>Each <b class="k" data-k="hb">hemoglobin</b> molecule is four polypeptides, each holding an iron-containing <b class="k" data-k="heme">heme</b> that carries O₂: two from the α family and two from the β family.</p>
+              <p>Each <b class="k" data-k="hb">hemoglobin</b> molecule is four polypeptides: two from the α family and two from the β family. Each chain holds an iron-containing <b class="k" data-k="heme">heme</b> group, which binds O₂.</p>
             </article>
-            <article class="beat predict" data-at="0.66,0.72" data-q="fetal">
+            <article class="beat predict" data-at="0.62,0.68" data-q="fetal">
               <p class="eyebrow mono">Predict</p>
               <h3>A fetus uses γ-globin instead of β. Why would it need a different hemoglobin?</h3>
               <ol class="opts">
@@ -401,11 +537,16 @@
               </ol>
               <p class="why">Right: embryonic and fetal hemoglobins bind O₂ more strongly than adult hemoglobin, so oxygen moves from mother to fetus across the placenta.</p>
             </article>
-            <article class="beat" data-at="0.72,1">
+            <article class="beat" data-at="0.68,0.86">
               <p class="eyebrow mono">A developmental switch</p>
               <h3>Different genes, different times.</h3>
-              <p>ζ and ε are made in the <b>embryo</b>; α and the two γ genes (Gγ, Aγ) in the <b>fetus</b>; α and β (with a little δ) in the <b>adult</b>. The family's members differ just enough to suit each stage.</p>
+              <p>ζ (α family) and ε (β family) are made in the <b>embryo</b>. In the <b>fetus</b>, α and the two γ genes (Gγ, Aγ). In the <b>adult</b>, α and β, with a little δ. Hemoglobin is always two α-type plus two β-type chains; which members fill those places changes as you develop.</p>
               <p class="note">Curves are schematic: the order and timing of the switches, not exact amounts.</p>
+            </article>
+            <article class="beat" data-at="0.86,1">
+              <p class="eyebrow mono">Why families are worth having</p>
+              <h3>One job, tuned for each stage.</h3>
+              <p>A family lets a genome make many copies of one product (rRNA) or slightly different versions of it for different circumstances (globins). Both began the same way: with a duplication.</p>
             </article>
           </div>
           <aside class="takeaway" data-take="0.965,1" aria-label="Takeaway">
@@ -416,53 +557,88 @@
       </section>
 
       <!-- 07 · DUPLICATION AND REARRANGEMENT (18.5) --------------------------------------------->
-      <section id="ch7" class="chapter" data-f0="7" data-f1="8" style="--h: 840vh">
+      <section id="ch7" class="chapter" data-f0="7" data-f1="8" style="--h: 1080vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.5</span><h2 class="ch-title" data-chars>Duplication and rearrangement</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.14">
-              <p class="eyebrow mono">Whole chromosome sets</p>
-              <h3>An accident that doubles everything.</h3>
-              <p>Mutation is the raw material of genome evolution. An error in meiosis can add an entire extra set of chromosomes: <b class="k" data-k="poly">polyploidy</b>. One copy of each gene keeps the old job, so the spare copy is free to mutate, and occasionally gains a new function.</p>
+            <article class="beat" data-at="0,0.07">
+              <p class="eyebrow mono">How genomes grow</p>
+              <h3>Mutation is the raw material.</h3>
+              <p>The earliest life probably had the minimum number of genes it needed to survive and reproduce. Over time, genomes grew. The extra DNA, made by duplications, was the raw material from which new genes diversified.</p>
             </article>
-            <article class="beat fieldnote" data-at="0.14,0.22">
+            <article class="beat" data-at="0.07,0.14">
+              <p class="eyebrow mono">Duplication of entire chromosome sets</p>
+              <h3>An accident that doubles everything.</h3>
+              <p>An error in meiosis can leave a cell with one or more extra sets of chromosomes: <b class="k" data-k="poly">polyploidy</b>. Because one copy of each gene still does the essential job, the spare copy is free to mutate. Most such changes are useless, but occasionally one gives a new function.</p>
+            </article>
+            <article class="beat predict" data-at="0.14,0.19" data-q="spare">
+              <p class="eyebrow mono">Check · 18.5</p>
+              <h3>Why can a duplicated gene evolve a new function?</h3>
+              <ol class="opts">
+                <li><button>Duplicated genes mutate faster than other genes</button></li>
+                <li><button data-ok>The other copy keeps doing the original job</button></li>
+                <li><button>Duplicated genes are never expressed</button></li>
+              </ol>
+              <p class="why">Right: with one copy covering the essential function, mutations in the spare copy aren't removed by selection, so it can drift toward something new.</p>
+            </article>
+            <article class="beat fieldnote" data-at="0.19,0.25">
               <p class="eyebrow mono">Field note · <i>Ciona robusta</i></p>
               <h3>One copy where we have four.</h3>
-              <p>Early vertebrates went through two rounds of whole-genome duplication. <i>Ciona</i>, whose lineage split off before them, keeps many developmental genes in single copy: one Hox cluster (split across two chromosomes) where mammals have four, one Brachyury.</p>
+              <p>Early vertebrates went through two rounds of whole-genome duplication. <i>Ciona</i>, whose lineage split off before them, keeps many developmental genes in single copy: one Hox cluster (split across two chromosomes) where mammals have four, and one Brachyury.</p>
               <p class="note">That's part of why it's such a clean system for studying how a gene like Brachyury works (Dehal &amp; Boore 2005).</p>
             </article>
-            <article class="beat predict" data-at="0.22,0.28" data-q="fusion">
+            <article class="beat predict" data-at="0.25,0.3" data-q="fusion">
               <p class="eyebrow mono">Predict</p>
               <h3>Humans have 23 chromosome pairs; chimpanzees have 24. What most likely happened?</h3>
               <ol class="opts">
-                <li><button>Chimps gained a new chromosome from a virus</button></li>
                 <li><button data-ok>Two ancestral chromosomes fused in the human line</button></li>
+                <li><button>Chimps gained a new chromosome from a virus</button></li>
                 <li><button>Humans lost a chromosome's worth of genes</button></li>
               </ol>
               <p class="why">Right: human chromosome 2 matches chimp chromosomes 12 and 13 end to end, and still carries the evidence of the join.</p>
             </article>
-            <article class="beat" data-at="0.28,0.46">
-              <p class="eyebrow mono">Figure 18.10 · human chromosome 2</p>
+            <article class="beat" data-at="0.3,0.46">
+              <p class="eyebrow mono">Alterations of chromosome structure · Figure 18.10</p>
               <h3>A fusion you can still see.</h3>
-              <p>After the human and chimp lineages split, two ancestral chromosomes <b class="k" data-k="fuse">fused</b>. Human chromosome 2 still has <b class="k" data-k="tel">telomere-like sequences</b> in its middle and the remains of a <b class="k" data-k="cen">second centromere</b>.</p>
+              <p>After the human and chimp lineages split, two ancestral chromosomes <b class="k" data-k="fuse">fused</b> end to end. Human chromosome 2 still has <b class="k" data-k="tel">telomere-like sequences</b> in its middle, where two chromosome ends joined, and the remains of a <b class="k" data-k="cen">second centromere</b>, now inactive.</p>
             </article>
-            <article class="beat" data-at="0.46,0.62">
+            <article class="beat" data-at="0.46,0.55">
               <p class="eyebrow mono">Figure 18.11 · human vs mouse</p>
               <h3>Same blocks, reshuffled.</h3>
-              <p>Large blocks of genes on human chromosome 16 are found together on mouse chromosomes 7, 8, 16 and 17: the blocks stayed intact while the chromosomes around them were rearranged. Duplications and inversions arise from errors in meiotic recombination, and they seem to have accelerated about 100 million years ago, as mammals diversified.</p>
+              <p>Large blocks of genes on human chromosome 16 are found together on mouse chromosomes 7, 8, 16 and 17. The genes inside each block stayed together, while the chromosomes around them were broken and rejoined in each lineage.</p>
             </article>
-            <article class="beat" data-at="0.62,0.92">
+            <article class="beat" data-at="0.55,0.62">
+              <p class="eyebrow mono">Rearrangements and new species</p>
+              <h3>Broken, flipped, rejoined.</h3>
+              <p>Duplications and inversions arise from errors in meiotic recombination. Their rate seems to have sped up about 100 million years ago, around when mammals diversified. Rearrangements can help new species form: chromosomes that no longer match can't pair properly at meiosis in hybrids.</p>
+              <p class="note">The breakpoints tend to fall in “hot spots”, often near duplicated sequences.</p>
+            </article>
+            <article class="beat" data-at="0.62,0.78">
               <p class="eyebrow mono">Figure 18.12 · unequal crossing over</p>
               <h3>A misaligned swap copies a gene.</h3>
-              <p>During prophase I, homologous chromosomes can pair slightly out of register, often where <b class="k" data-k="teAlign">transposable elements</b> give them matching sequence. A crossover there is <b class="k" data-k="uneq">unequal</b>: one chromatid ends up with <b>two copies</b> of a gene, the other with <b>none</b>.</p>
-              <p class="note">Errors during DNA replication (slippage) can also duplicate stretches of DNA.</p>
+              <p>During prophase I, homologous chromosomes can pair slightly out of register, often where <b class="k" data-k="teAlign">transposable elements</b> give them matching sequence in the wrong place. A crossover there is <b class="k" data-k="uneq">unequal</b>: one chromatid ends up with <b>two copies</b> of a gene, the other with <b>none</b>.</p>
+            </article>
+            <article class="beat" data-at="0.78,0.86">
+              <p class="eyebrow mono">Other ways to duplicate DNA</p>
+              <h3>Slips and swaps.</h3>
+              <p>Errors during DNA replication can also duplicate DNA: the template strand can slip, so a stretch is copied twice. Unequal crossing over and replication errors both produce <b>duplications of gene-sized regions</b>, the starting point for new genes.</p>
+            </article>
+            <article class="beat predict" data-at="0.86,0.92" data-q="uneq">
+              <p class="eyebrow mono">Check · 18.5</p>
+              <h3>Unequal crossing over produces…</h3>
+              <ol class="opts">
+                <li><button>Two identical chromatids, each with one copy</button></li>
+                <li><button>A whole extra set of chromosomes</button></li>
+                <li><button data-ok>One chromatid with a duplication, the other with a deletion</button></li>
+              </ol>
+              <p class="why">Right: what one chromatid gains, the other loses.</p>
             </article>
             <article class="beat" data-at="0.92,1">
               <p class="eyebrow mono">Next</p>
               <h3>A spare copy is an experiment.</h3>
             </article>
           </div>
-          <aside class="takeaway" data-take="0.86,0.93" aria-label="Takeaway">
+          <aside class="takeaway" data-take="0.93,1" aria-label="Takeaway">
             <p class="tk-h mono">Takeaway · 18.5 (part 1)</p>
             <ol><li><span>Polyploidy duplicates whole sets; spare copies can diverge.</span></li><li><span>Human 2 = a fusion of two ancestral (chimp 12 + 13) chromosomes.</span></li><li><span>Unequal crossing over: one chromatid gains a gene, the other loses it.</span></li></ol>
           </aside>
@@ -470,50 +646,80 @@
       </section>
 
       <!-- 08 · NEW GENES FROM OLD (18.5) -------------------------------------------------------->
-      <section id="ch8" class="chapter" data-f0="8" data-f1="9" style="--h: 760vh">
+      <section id="ch8" class="chapter" data-f0="8" data-f1="9" style="--h: 980vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.5</span><h2 class="ch-title" data-chars>New genes from old</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.1">
+            <article class="beat" data-at="0,0.08">
               <p class="eyebrow mono">Genes with related functions</p>
               <h3>Read the globin families backwards.</h3>
-              <p>Every α and β gene, pseudogenes included, descends from one ancestor.</p>
+              <p>Every α and β gene, pseudogenes included, descends from one ancestor. Watch the maps fold back into a family tree.</p>
             </article>
-            <article class="beat" data-at="0.1,0.34">
+            <article class="beat" data-at="0.08,0.24">
               <p class="eyebrow mono">Figure 18.13 · 450–500 million years</p>
               <h3>Duplicate. Mutate. Move. Repeat.</h3>
-              <p>An <b class="k" data-k="anc">ancestral globin gene</b> duplicated about <b>450–500 million years ago</b>. Both copies accumulated mutations, becoming the <b>α</b> and <b>β</b> lineages; <b class="k" data-k="transp">transposition</b> carried them to different chromosomes; further duplications and mutations gave today's families, pseudogenes included.</p>
+              <p>An <b class="k" data-k="anc">ancestral globin gene</b> duplicated about <b>450–500 million years ago</b>. Both copies accumulated mutations, becoming the <b>α</b> and <b>β</b> lineages; <b class="k" data-k="transp">transposition</b> carried them to different chromosomes; further duplications and mutations gave today's families.</p>
             </article>
-            <article class="beat" data-at="0.34,0.46">
+            <article class="beat predict" data-at="0.24,0.3" data-q="transp">
+              <p class="eyebrow mono">Check · 18.5</p>
+              <h3>How did the α and β lineages end up on different chromosomes?</h3>
+              <ol class="opts">
+                <li><button data-ok>Transposition moved one of them</button></li>
+                <li><button>Alternative splicing separated them</button></li>
+                <li><button>They were always on different chromosomes</button></li>
+              </ol>
+              <p class="why">Right: after the first duplication, a copy was carried to another chromosome by transposition. The families then grew in place.</p>
+            </article>
+            <article class="beat" data-at="0.3,0.36">
+              <p class="eyebrow mono">Reading the tree</p>
+              <h3>Similarity tells time.</h3>
+              <p>The more alike two globin genes are in sequence, the more recently they were duplicated. Pseudogenes are copies that mutated until they stopped working.</p>
+              <p class="note">The book's Scientific Skills Exercise does exactly this with an amino acid identity table of human globins.</p>
+            </article>
+            <article class="beat" data-at="0.36,0.46">
               <p class="eyebrow mono">Genes with novel functions</p>
               <h3>Same shape, new job.</h3>
-              <p><b class="k" data-k="lysozyme">Lysozyme</b> is an enzyme that helps protect animals against bacteria. <b class="k" data-k="lact">α-Lactalbumin</b> is a nonenzymatic protein that helps make milk in mammals. They're so similar in sequence and 3-D structure that they must be duplicated copies of one gene; one copy gained a new function.</p>
+              <p><b class="k" data-k="lysozyme">Lysozyme</b> is an enzyme that helps protect animals against bacteria. <b class="k" data-k="lact">α-Lactalbumin</b> is a nonenzymatic protein that helps make milk in mammals. They're so similar in sequence and 3-D structure that they must be duplicated copies of one ancestral gene; one copy gained a new function.</p>
             </article>
             <article class="beat predict" data-at="0.46,0.52" data-q="shuffle">
               <p class="eyebrow mono">Predict · Test Your Understanding</p>
               <h3>Two proteins share one domain but are otherwise unrelated. Most likely cause?</h3>
               <ol class="opts">
                 <li><button>Alternative splicing</button></li>
-                <li><button data-ok>Exon shuffling</button></li>
                 <li><button>Polyploidy</button></li>
+                <li><button data-ok>Exon shuffling</button></li>
               </ol>
               <p class="why">Right: domains are often encoded by separate exons, so an exon moved into another gene brings its domain with it.</p>
             </article>
             <article class="beat" data-at="0.52,0.62">
-              <p class="eyebrow mono">Domains and exons</p>
+              <p class="eyebrow mono">Rearrangements of parts of genes</p>
               <h3>Proteins built from parts.</h3>
-              <p>Proteins often have <b class="k" data-k="domain">domains</b>, discrete structural and functional regions, frequently encoded by different exons. Unequal crossing over can duplicate an <b>exon</b> within a gene: exon duplication.</p>
+              <p>Proteins often have <b class="k" data-k="domain">domains</b>, discrete structural and functional regions, frequently encoded by different exons. Unequal crossing over within a gene can duplicate an exon (<b>exon duplication</b>), giving a protein a second copy of a domain.</p>
             </article>
-            <article class="beat" data-at="0.62,0.8">
+            <article class="beat" data-at="0.62,0.74">
               <p class="eyebrow mono">Figure 18.14 · exon shuffling</p>
               <h3>TPA: a gene assembled from three others.</h3>
-              <p>In <b class="k" data-k="shuffle">exon shuffling</b>, exons are mixed and matched between different genes. The gene for <b class="k" data-k="tpa">tissue plasminogen activator (TPA)</b>, which dissolves blood clots, carries an EGF exon (from epidermal growth factor), a “finger” exon (from fibronectin) and two “kringle” exons (from plasminogen).</p>
+              <p>In <b class="k" data-k="shuffle">exon shuffling</b>, exons are mixed and matched between different genes. The gene for <b class="k" data-k="tpa">tissue plasminogen activator (TPA)</b>, a protein that dissolves blood clots, carries an EGF exon (from epidermal growth factor), a “finger” exon (from fibronectin) and two “kringle” exons (from plasminogen).</p>
             </article>
-            <article class="beat" data-at="0.8,1">
+            <article class="beat predict" data-at="0.74,0.8" data-q="kringle">
+              <p class="eyebrow mono">Check · 18.5</p>
+              <h3>Where did TPA's two kringle exons come from?</h3>
+              <ol class="opts">
+                <li><button>The fibronectin gene, then duplicated</button></li>
+                <li><button data-ok>The plasminogen gene, then duplicated</button></li>
+                <li><button>The epidermal growth factor gene</button></li>
+              </ol>
+              <p class="why">Right: a kringle exon came from plasminogen and was duplicated. Fibronectin gave the finger, EGF the growth-factor exon.</p>
+            </article>
+            <article class="beat" data-at="0.8,0.92">
               <p class="eyebrow mono">How transposable elements contribute</p>
               <h3>Mobile DNA as an evolutionary engine.</h3>
-              <p>Transposable elements promote recombination between chromosomes; inserted into a gene they can block it, inserted near one they can turn its expression up or down; and they can carry exons or whole genes to new places. Most such changes are harmful; a few are the stuff of new adaptations.</p>
-              <p class="note">In primates, some Alu elements have been recruited as exons, adding new alternative splicing.</p>
+              <p>Transposable elements promote recombination between chromosomes. Inserted into a coding sequence they can block a protein; inserted into a regulatory sequence they can raise or lower expression. They can carry exons or whole genes to new places. Most such changes are harmful; a few are the stuff of new adaptations.</p>
+            </article>
+            <article class="beat" data-at="0.92,1">
+              <p class="eyebrow mono">In primates</p>
+              <h3>Alu, recruited.</h3>
+              <p>Some Alu elements inside genes have become new exons, adding alternative splicing and new versions of proteins.</p>
             </article>
           </div>
           <aside class="takeaway" data-take="0.965,1" aria-label="Takeaway">
@@ -524,30 +730,61 @@
       </section>
 
       <!-- 09 · COMPARING GENOMES (18.6) -------------------------------------------------------->
-      <section id="ch9" class="chapter" data-f0="9" data-f1="10" style="--h: 720vh">
+      <section id="ch9" class="chapter" data-f0="9" data-f1="10" style="--h: 940vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.6</span><h2 class="ch-title" data-chars>Comparing genomes</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.22">
-              <p class="eyebrow mono">Distantly related · Figure 18.15</p>
+            <article class="beat" data-at="0,0.12">
+              <p class="eyebrow mono">Distantly related species · Figure 18.15</p>
               <h3>A tree read from genes that barely change.</h3>
-              <p>Comparing <b class="k" data-k="conserved">highly conserved genes</b> reveals ancient splits: bacteria, archaea and eukaryotes diverged <b>2–4 billion years ago</b>. The same conservation is why yeast, flies and mice (model organisms) can teach us about human biology.</p>
+              <p>Comparing <b class="k" data-k="conserved">highly conserved genes</b>, ones whose sequences have changed very little, reveals ancient splits: bacteria, archaea and eukaryotes diverged <b>2–4 billion years ago</b>.</p>
             </article>
-            <article class="beat" data-at="0.22,0.42">
-              <p class="eyebrow mono">Closely related · human and chimpanzee</p>
+            <article class="beat" data-at="0.12,0.22">
+              <p class="eyebrow mono">What comparisons tell us</p>
+              <h3>Old events, recent events.</h3>
+              <p>Distantly related species show ancient events; closely related species show recent ones. The same conservation explains why <b>model organisms</b> (yeast, flies, mice) can teach us about human biology: many of our genes have close relatives in theirs.</p>
+            </article>
+            <article class="beat" data-at="0.22,0.34">
+              <p class="eyebrow mono">Closely related species · human and chimpanzee</p>
               <h3>1.2% and 2.7%.</h3>
-              <p>Aligned, the human and chimp genomes differ by <b>1.2%</b> at <b class="k" data-k="subs">single base pairs</b> and by <b>2.7%</b> through <b class="k" data-k="indel">insertions and deletions</b>. Genes that changed faster in humans include ones for defence against malaria and tuberculosis, and for regulating brain size.</p>
+              <p>Aligned, the human and chimp genomes differ by <b>1.2%</b> at <b class="k" data-k="subs">single base pairs</b> and by <b>2.7%</b> through <b class="k" data-k="indel">insertions and deletions</b> of larger stretches. Genes that changed faster in humans include ones for defence against malaria and tuberculosis, and for regulating brain size.</p>
+              <p class="note">Since the two lineages split, Alu elements have made about three times as many new copies of themselves in humans as in chimps.</p>
             </article>
-            <article class="beat" data-at="0.42,0.6">
+            <article class="beat predict" data-at="0.34,0.4" data-q="chimp">
+              <p class="eyebrow mono">Check · 18.6</p>
+              <h3>How much do human and chimp genomes differ?</h3>
+              <ol class="opts">
+                <li><button data-ok>About 1.2% in single bases, plus 2.7% from insertions and deletions</button></li>
+                <li><button>About 12% in single bases</button></li>
+                <li><button>They are identical; only gene expression differs</button></li>
+              </ol>
+              <p class="why">Right: 1.2% substitutions and 2.7% indels. Small differences, but in the right genes they matter.</p>
+            </article>
+            <article class="beat" data-at="0.4,0.54">
               <p class="eyebrow mono">FOXP2 · Figure 18.16</p>
               <h3>A gene for a voice.</h3>
-              <p><b class="k" data-k="foxp2">FOXP2</b> is a transcription factor that switches on genes involved in vocalization in vertebrates. Mutations in it cause severe speech and language problems in people; mice with both copies disrupted don't make the normal ultrasonic whistles.</p>
+              <p><b class="k" data-k="foxp2">FOXP2</b> codes for a transcription factor that switches on genes involved in vocalization in vertebrates. It has evolved faster in the human lineage. Mutations in it cause severe speech and language problems in people; mice with both copies disrupted don't make the normal ultrasonic whistles.</p>
               <p class="note">Wild type · heterozygote · homozygote: the homozygous pups are silent.</p>
             </article>
-            <article class="beat" data-at="0.6,0.8">
+            <article class="beat predict" data-at="0.54,0.6" data-q="foxp2">
+              <p class="eyebrow mono">Check · 18.6</p>
+              <h3>What happens to mouse pups with both copies of FOXP2 disrupted?</h3>
+              <ol class="opts">
+                <li><button>They whistle more than normal</button></li>
+                <li><button>They can't hear ultrasound</button></li>
+                <li><button data-ok>They don't make the normal ultrasonic whistles</button></li>
+              </ol>
+              <p class="why">Right: evidence that FOXP2 is needed for vocalization, and a clue to why its changes in humans may matter for speech.</p>
+            </article>
+            <article class="beat" data-at="0.6,0.72">
               <p class="eyebrow mono">Within a species</p>
               <h3>Humans are young, and alike.</h3>
-              <p>Most human variation is <b class="k" data-k="snp">single nucleotide polymorphisms (SNPs)</b>, plus inversions, deletions and duplications, including many <b class="k" data-k="cnv">copy-number variants (CNVs)</b>, where a segment appears different numbers of times in different people.</p>
+              <p>Our species is young, so humans vary little. Most variation is <b class="k" data-k="snp">single nucleotide polymorphisms (SNPs)</b>, plus inversions, deletions and duplications, including many <b class="k" data-k="cnv">copy-number variants (CNVs)</b>, where a segment appears different numbers of times in different people.</p>
+            </article>
+            <article class="beat" data-at="0.72,0.8">
+              <p class="eyebrow mono">Why variation matters</p>
+              <h3>Markers for disease and ancestry.</h3>
+              <p>SNPs, CNVs and STRs act as genetic markers: comparing them across many people helps locate genes involved in disease and reconstruct the history of human populations.</p>
             </article>
             <article class="beat predict" data-at="0.8,0.88" data-q="macaque">
               <p class="eyebrow mono">Predict · Concept Check 18.6</p>
@@ -572,49 +809,74 @@
       </section>
 
       <!-- 10 · EVO-DEVO (18.6) -------------------------------------------------------------------->
-      <section id="ch10" class="chapter" data-f0="10" data-f1="11" style="--h: 900vh">
+      <section id="ch10" class="chapter" data-f0="10" data-f1="11" style="--h: 1080vh">
         <div class="sticky">
           <header class="ch-head"><span class="ch-num mono">18.6</span><h2 class="ch-title" data-chars>Evo-devo</h2></header>
           <div class="beats">
-            <article class="beat" data-at="0,0.12">
+            <article class="beat" data-at="0,0.08">
               <p class="eyebrow mono">Evolutionary developmental biology</p>
               <h3>180 nucleotides in every animal.</h3>
-              <p><b>Evo-devo</b> compares developmental processes across organisms. Every <i>Drosophila</i> homeotic gene contains a 180-nucleotide sequence, the <b class="k" data-k="homeobox">homeobox</b>, which codes for a 60-amino-acid <b class="k" data-k="homeodomain">homeodomain</b>: the part of the protein that binds DNA when it acts as a transcription factor.</p>
+              <p><b>Evo-devo</b> compares developmental processes across organisms. <b>Homeotic genes</b> are master regulators that control the identity of body parts. Every <i>Drosophila</i> homeotic gene contains a 180-nucleotide sequence, the <b class="k" data-k="homeobox">homeobox</b>, which codes for a 60-amino-acid <b class="k" data-k="homeodomain">homeodomain</b>: the part of the protein that binds DNA when it acts as a transcription factor.</p>
               <p class="note">Identical or very similar sequences exist in vertebrates, other invertebrates, yeasts and plants.</p>
+            </article>
+            <article class="beat predict" data-at="0.08,0.12" data-q="homeobox">
+              <p class="eyebrow mono">Check · 18.6</p>
+              <h3>What does the homeobox code for?</h3>
+              <ol class="opts">
+                <li><button data-ok>A 60-amino-acid homeodomain that binds DNA</button></li>
+                <li><button>A ribosomal RNA used in the embryo</button></li>
+                <li><button>An enzyme that cuts transposons out</button></li>
+              </ol>
+              <p class="why">Right: the homeodomain lets the protein bind DNA and act as a transcription factor, switching on the genes that build a body region.</p>
             </article>
             <article class="beat" data-at="0.12,0.26">
               <p class="eyebrow mono">Figure 18.17 · the fruit fly</p>
               <h3>Chromosome order = body order.</h3>
-              <p>The fly's <b class="k" data-k="hox">Hox genes</b> sit on its chromosome in the same order as the body regions they control, head to tail. Colours match each gene to the region where it is expressed: 10-hour <b class="k" data-k="flyEmbryo">embryo</b>, then <b class="k" data-k="flyAdult">adult</b>.</p>
+              <p>The fly's <b class="k" data-k="hox">Hox genes</b> sit on its chromosome in the same order as the body regions they control, head to tail. Colours match each gene to the region where it is expressed: the 10-hour <b class="k" data-k="flyEmbryo">embryo</b>, then the <b class="k" data-k="flyAdult">adult</b>.</p>
             </article>
             <article class="beat predict" data-at="0.26,0.32" data-q="hox">
               <p class="eyebrow mono">Predict</p>
               <h3>A mouse has Hox genes in the same order as the fly's, matching the same body regions. Why?</h3>
               <ol class="opts">
                 <li><button>Mice and flies evolved them independently</button></li>
-                <li><button data-ok>Both inherited the cluster from a common ancestor</button></li>
                 <li><button>Viruses carried them between species</button></li>
+                <li><button data-ok>Both inherited the cluster from a common ancestor</button></li>
               </ol>
               <p class="why">Right: the order and function were conserved for over half a billion years of separate evolution.</p>
             </article>
-            <article class="beat" data-at="0.32,0.52">
+            <article class="beat" data-at="0.32,0.46">
               <p class="eyebrow mono">Figure 18.17 · the mouse</p>
               <h3>Four clusters, the same order.</h3>
               <p>The mouse has four Hox clusters on four chromosomes. Each follows the fly's order, and each gene is expressed along the <b class="k" data-k="mouseEmbryo">12-day embryo</b>'s head-to-tail axis where its fly counterpart is.</p>
             </article>
-            <article class="beat" data-at="0.52,0.8">
+            <article class="beat" data-at="0.46,0.52">
+              <p class="eyebrow mono">Concept Check · then why so different?</p>
+              <h3>Same toolkit, different instructions.</h3>
+              <p>If flies and mice share homeobox genes, why don't they look alike? Because the genes differ in <b>when and where</b> they're expressed, and in <b>which genes</b> their proteins switch on. The homeodomain is nearly the same; the rest of each protein, and its targets, differ.</p>
+            </article>
+            <article class="beat" data-at="0.52,0.72">
               <p class="eyebrow mono">Figure 18.18 · crustacean vs insect</p>
               <h3>Same genes. Different places. Different animals.</h3>
-              <p>A brine shrimp and a grasshopper share the same four Hox genes. In the <b class="k" data-k="artemia">crustacean</b> they're expressed together all along the thorax: every segment grows a swimming limb. In the <b class="k" data-k="grass">insect</b> each has its own region, and in the abdomen they suppress legs.</p>
+              <p>A brine shrimp and a grasshopper share the same four Hox genes. In the <b class="k" data-k="artemia">crustacean</b> they're expressed together all along the thorax, and every segment grows a swimming limb. In the <b class="k" data-k="grass">insect</b> each has its own region, and in the abdomen they suppress legs.</p>
               <p class="note">Small changes in <i>where</i> and <i>when</i> genes are expressed, not new genes, can remodel a body.</p>
+            </article>
+            <article class="beat predict" data-at="0.72,0.8" data-q="crust">
+              <p class="eyebrow mono">Check · 18.6</p>
+              <h3>A brine shrimp and a grasshopper have the same Hox genes. What makes their bodies differ?</h3>
+              <ol class="opts">
+                <li><button>The grasshopper has extra Hox genes</button></li>
+                <li><button data-ok>Where the Hox genes are expressed along the body</button></li>
+                <li><button>The brine shrimp's Hox genes lack homeoboxes</button></li>
+              </ol>
+              <p class="why">Right: same genes, different expression domains, different animals.</p>
             </article>
             <article class="beat fieldnote" data-at="0.8,1">
               <p class="eyebrow mono">Field note · <i>Ciona robusta</i> tadpole</p>
               <h3>Forty cells that make a backbone's ancestor.</h3>
-              <p>The sea squirt's tadpole has a <b class="k" data-k="noto">notochord</b> of exactly <b>40 cells</b>. They're specified by <b>Brachyury</b>, a transcription factor so conserved that mice missing one copy of it are born with short tails. <i>Ciona</i> is the closest living invertebrate relative of vertebrates: a chance to read the notochord's genetic program at its simplest.</p>
+              <p>The sea squirt's tadpole has a <b class="k" data-k="noto">notochord</b> of exactly <b>40 cells</b>, specified by <b>Brachyury</b>: a transcription factor so conserved that mice missing one copy of it are born with short tails. Tunicates like <i>Ciona</i> are the closest living invertebrate relatives of vertebrates, a chance to read the notochord's genetic program at its simplest.</p>
             </article>
           </div>
-          <aside class="takeaway" data-take="0.74,0.8" aria-label="Takeaway">
+          <aside class="takeaway" data-take="0.72,0.8" aria-label="Takeaway">
             <p class="tk-h mono">Takeaway · 18.6 (part 2)</p>
             <ol><li><span>Homeobox (180 nt) → homeodomain (60 aa), binds DNA.</span></li><li><span>Hox genes: same order in fly and mouse, same axis, common ancestor.</span></li><li><span>Changing where genes are expressed changes body plans.</span></li></ol>
           </aside>
@@ -644,7 +906,248 @@
             </article>
             <article class="beat beat-final" data-at="0.86,1.01">
               <h3 class="final">Every genome is a history of&nbsp;itself.</h3>
+              <p class="mono quiz-cue">Now test yourself · twenty questions below ↓</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIZ ------------------------------------------------------------------------------------->
+      <section id="quiz" class="quiz" data-f0="12" data-f1="12" aria-labelledby="quiz-h">
+        <div class="quiz-inner">
+          <header class="quiz-head">
+            <p class="mono quiz-eyebrow">Chapter 18 · Final quiz</p>
+            <h2 id="quiz-h">Twenty questions on chapter 18.</h2>
+            <p class="quiz-lede">One answer each, from every part of the chapter. You'll see why the right answer is right as soon as you choose. At the end: your score by section, with a link back to anything you missed.</p>
+          </header>
+          <div class="quiz-bar mono" data-qz-bar><span data-qz-score>0 / 20 answered</span><i><b data-qz-fill></b></i></div>
+          <div class="quiz-list">
+          <article class="qz" data-sec="18.1">
+            <p class="qz-n mono">01 · 18.1</p>
+            <h4>The whole-genome shotgun approach puts sequenced fragments in order by…</h4>
+            <ol class="qz-opts">
+              <li><button>Their sizes, from shortest to longest</button></li>
+              <li><button data-ok>Matching the overlapping sequences at their ends</button></li>
+              <li><button>The order in which they were cloned</button></li>
+              <li><button>Their positions recorded before cutting</button></li>
+            </ol>
+            <p class="qz-why">Software finds where the end of one read matches the start of another and stitches the reads into one continuous sequence.</p>
+          </article>
+          <article class="qz" data-sec="18.1">
+            <p class="qz-n mono">02 · 18.1</p>
+            <h4>Sequencing a human genome took 13 years and $100 million the first time. By 2018 it took…</h4>
+            <ol class="qz-opts">
+              <li><button>About a month and $1 million</button></li>
+              <li><button>About a year and $10 million</button></li>
+              <li><button>Four months and $100,000</button></li>
+              <li><button data-ok>A day or less and about $1,000</button></li>
+            </ol>
+            <p class="qz-why">Faster methods such as sequencing by synthesis read millions of short fragments at once.</p>
+          </article>
+          <article class="qz" data-sec="18.2">
+            <p class="qz-n mono">03 · 18.2</p>
+            <h4>What is BLAST used for?</h4>
+            <ol class="qz-opts">
+              <li><button data-ok>Comparing a sequence against databases to find similar sequences</button></li>
+              <li><button>Assembling fragments into a genome</button></li>
+              <li><button>Cutting DNA into fragments</button></li>
+              <li><button>Measuring how much RNA a gene makes</button></li>
+            </ol>
+            <p class="qz-why">Similar sequences usually mean shared ancestry and a similar function, so BLAST is usually the first clue to what a new gene does.</p>
+          </article>
+          <article class="qz" data-sec="18.2">
+            <p class="qz-n mono">04 · 18.2</p>
+            <h4>The ENCODE project found that at least this much of the human genome is transcribed at some point, in at least one cell type:</h4>
+            <ol class="qz-opts">
+              <li><button>1.5%</button></li>
+              <li><button>25%</button></li>
+              <li><button data-ok>75%</button></li>
+              <li><button>50%</button></li>
+            </ol>
+            <p class="qz-why">Far more of the genome is transcribed than codes for protein, which suggests much noncoding DNA has roles.</p>
+          </article>
+          <article class="qz" data-sec="18.3">
+            <p class="qz-n mono">05 · 18.3</p>
+            <h4>Which statement about genome size is true?</h4>
+            <ol class="qz-opts">
+              <li><button>Larger genomes always have more genes</button></li>
+              <li><button>Humans have the largest animal genome</button></li>
+              <li><button data-ok>Within a domain, genome size shows no systematic relationship to how complex an organism is</button></li>
+              <li><button>Bacteria have larger genomes than most animals</button></li>
+            </ol>
+            <p class="qz-why">Paris japonica has about 50 times more DNA than a human; corn has more genes than we do.</p>
+          </article>
+          <article class="qz" data-sec="18.3">
+            <p class="qz-n mono">06 · 18.3</p>
+            <h4>Why do humans have such a low gene density (about 7 genes per Mb)?</h4>
+            <ol class="qz-opts">
+              <li><button data-ok>Long introns and lots of noncoding DNA between genes</button></li>
+              <li><button>Humans have very few genes in total</button></li>
+              <li><button>Our genes are shorter than a bacterium's</button></li>
+              <li><button>Most of our genes are on the Y chromosome</button></li>
+            </ol>
+            <p class="qz-why">E. coli packs about 950 genes into each million base pairs; mammals spread theirs out among vast stretches of noncoding DNA.</p>
+          </article>
+          <article class="qz" data-sec="18.4">
+            <p class="qz-n mono">07 · 18.4</p>
+            <h4>About what percentage of the human genome is exons that code for protein?</h4>
+            <ol class="qz-opts">
+              <li><button>About 26%</button></li>
+              <li><button>About 15%</button></li>
+              <li><button>About 44%</button></li>
+              <li><button data-ok>About 1.5%</button></li>
+            </ol>
+            <p class="qz-why">The other 98.5% doesn't code for proteins, rRNAs or tRNAs.</p>
+          </article>
+          <article class="qz" data-sec="18.4">
+            <p class="qz-n mono">08 · 18.4</p>
+            <h4>Transposable elements and related sequences make up about how much of the human genome?</h4>
+            <ol class="qz-opts">
+              <li><button>1.5%</button></li>
+              <li><button data-ok>44%</button></li>
+              <li><button>5%</button></li>
+              <li><button>14%</button></li>
+            </ol>
+            <p class="qz-why">Mostly retrotransposons: L1 (about 17%) and Alu (about 10%).</p>
+          </article>
+          <article class="qz" data-sec="18.4">
+            <p class="qz-n mono">09 · 18.4</p>
+            <h4>How does a retrotransposon differ from a cut-and-paste transposon?</h4>
+            <ol class="qz-opts">
+              <li><button data-ok>It moves by way of an RNA intermediate and always leaves a copy behind</button></li>
+              <li><button>It moves only within one chromosome</button></li>
+              <li><button>It is found only in prokaryotes</button></li>
+              <li><button>It is removed by transposase and never inserted</button></li>
+            </ol>
+            <p class="qz-why">The RNA copy is turned back into DNA by reverse transcriptase and inserted elsewhere; the original stays put.</p>
+          </article>
+          <article class="qz" data-sec="18.4">
+            <p class="qz-n mono">10 · 18.4</p>
+            <h4>The α-globin and β-globin gene families are found on…</h4>
+            <ol class="qz-opts">
+              <li><button>The same chromosome, side by side</button></li>
+              <li><button data-ok>Chromosomes 16 and 11</button></li>
+              <li><button>Chromosome 2, at the fusion site</button></li>
+              <li><button>The X and Y chromosomes</button></li>
+            </ol>
+            <p class="qz-why">α family on chromosome 16, β family on chromosome 11, each with working genes and pseudogenes.</p>
+          </article>
+          <article class="qz" data-sec="18.4">
+            <p class="qz-n mono">11 · 18.4</p>
+            <h4>Which β-family genes are expressed in the fetus?</h4>
+            <ol class="qz-opts">
+              <li><button>ε</button></li>
+              <li><button>δ and β</button></li>
+              <li><button>ζ</button></li>
+              <li><button data-ok>Gγ and Aγ</button></li>
+            </ol>
+            <p class="qz-why">ε is embryonic; the two γ genes are fetal; β (and a little δ) are adult. ζ is an α-family gene.</p>
+          </article>
+          <article class="qz" data-sec="18.5">
+            <p class="qz-n mono">12 · 18.5</p>
+            <h4>What is the evidence that human chromosome 2 formed by a fusion?</h4>
+            <ol class="qz-opts">
+              <li><button>It is the largest human chromosome</button></li>
+              <li><button>It has no genes in common with chimps</button></li>
+              <li><button data-ok>Telomere-like sequences in its middle and a vestigial second centromere</button></li>
+              <li><button>It carries the globin genes</button></li>
+            </ol>
+            <p class="qz-why">Those are the scars of two chromosome ends joining. Chimps still carry the two as separate chromosomes (12 and 13).</p>
+          </article>
+          <article class="qz" data-sec="18.5">
+            <p class="qz-n mono">13 · 18.5</p>
+            <h4>Unequal crossing over is often made possible by…</h4>
+            <ol class="qz-opts">
+              <li><button>Alternative splicing</button></li>
+              <li><button>Polyploidy</button></li>
+              <li><button>Reverse transcriptase</button></li>
+              <li><button data-ok>Transposable elements that let homologs pair out of register</button></li>
+            </ol>
+            <p class="qz-why">Matching transposable elements in the wrong places let homologs misalign; the crossover then leaves one chromatid with a duplication and the other with a deletion.</p>
+          </article>
+          <article class="qz" data-sec="18.5">
+            <p class="qz-n mono">14 · 18.5</p>
+            <h4>The α- and β-globin families arose from an ancestral globin gene that duplicated about…</h4>
+            <ol class="qz-opts">
+              <li><button>6 million years ago</button></li>
+              <li><button>50 million years ago</button></li>
+              <li><button data-ok>450–500 million years ago</button></li>
+              <li><button>2–4 billion years ago</button></li>
+            </ol>
+            <p class="qz-why">Duplication, then mutation, then transposition to different chromosomes, then further duplications.</p>
+          </article>
+          <article class="qz" data-sec="18.5">
+            <p class="qz-n mono">15 · 18.5</p>
+            <h4>Lysozyme and α-lactalbumin are similar in sequence and 3-D structure but have different jobs. This shows that…</h4>
+            <ol class="qz-opts">
+              <li><button>Proteins can change shape to change function</button></li>
+              <li><button data-ok>A duplicated gene can evolve a new function</button></li>
+              <li><button>Enzymes can only be made from one gene</button></li>
+              <li><button>Milk proteins came from bacteria</button></li>
+            </ol>
+            <p class="qz-why">After duplication, one copy kept the enzyme's job while the other became a milk protein in mammals.</p>
+          </article>
+          <article class="qz" data-sec="18.5">
+            <p class="qz-n mono">16 · 18.5</p>
+            <h4>The TPA gene contains exons that came from which genes?</h4>
+            <ol class="qz-opts">
+              <li><button data-ok>Epidermal growth factor, fibronectin and plasminogen genes</button></li>
+              <li><button>The globin genes</button></li>
+              <li><button>The rRNA genes</button></li>
+              <li><button>Hox genes</button></li>
+            </ol>
+            <p class="qz-why">An EGF exon, a finger exon from fibronectin, and two kringle exons from plasminogen: exon shuffling.</p>
+          </article>
+          <article class="qz" data-sec="18.6">
+            <p class="qz-n mono">17 · 18.6</p>
+            <h4>Comparing highly conserved genes is most useful for…</h4>
+            <ol class="qz-opts">
+              <li><button>Identifying individual people</button></li>
+              <li><button>Measuring gene density</button></li>
+              <li><button data-ok>Working out ancient splits, such as between the three domains of life</button></li>
+              <li><button>Finding STRs for forensics</button></li>
+            </ol>
+            <p class="qz-why">Genes that barely change still hold a readable signal after billions of years.</p>
+          </article>
+          <article class="qz" data-sec="18.6">
+            <p class="qz-n mono">18 · 18.6</p>
+            <h4>Most genetic variation between individual humans is in the form of…</h4>
+            <ol class="qz-opts">
+              <li><button>Extra chromosome sets</button></li>
+              <li><button>Whole-chromosome fusions</button></li>
+              <li><button>Differences in the genetic code</button></li>
+              <li><button data-ok>Single nucleotide polymorphisms (SNPs)</button></li>
+            </ol>
+            <p class="qz-why">Plus inversions, deletions and duplications, including many copy-number variants.</p>
+          </article>
+          <article class="qz" data-sec="18.6">
+            <p class="qz-n mono">19 · 18.6</p>
+            <h4>The homeobox is a 180-nucleotide sequence that codes for…</h4>
+            <ol class="qz-opts">
+              <li><button data-ok>A 60-amino-acid homeodomain that binds DNA</button></li>
+              <li><button>A 180-amino-acid enzyme</button></li>
+              <li><button>An RNA that is never translated</button></li>
+              <li><button>A structural protein of the notochord</button></li>
+            </ol>
+            <p class="qz-why">The homeodomain lets homeotic proteins act as transcription factors.</p>
+          </article>
+          <article class="qz" data-sec="18.6">
+            <p class="qz-n mono">20 · 18.6</p>
+            <h4>Flies and mice share Hox genes in the same order, yet look nothing alike. The best explanation is that…</h4>
+            <ol class="qz-opts">
+              <li><button>Mouse Hox genes lack homeoboxes</button></li>
+              <li><button data-ok>The genes differ in when and where they are expressed, and in which genes they regulate</button></li>
+              <li><button>Flies have more Hox genes than mice</button></li>
+              <li><button>Hox genes are not expressed in mammals</button></li>
+            </ol>
+            <p class="qz-why">Same toolkit, different instructions. The same point explains brine shrimp vs grasshopper.</p>
+          </article>
+          </div>
+          <div class="quiz-result" data-qz-result hidden>
+            <p class="mono quiz-eyebrow">Your result</p>
+            <p class="qz-big" data-qz-final></p>
+            <ul class="qz-secs" data-qz-secs></ul>
+            <button class="replay mono" data-qz-retake>Retake with the answers reshuffled</button>
           </div>
         </div>
       </section>

@@ -70,7 +70,7 @@ export function buildLesson() {
         if (right) tally.right++
         if (score) {
           score.hidden = false
-          score.textContent = `Predictions ${tally.right}/${tally.done} · ${total}`
+          score.textContent = `Questions ${tally.right}/${tally.done} right · ${total} in the film`
         }
       }),
     )

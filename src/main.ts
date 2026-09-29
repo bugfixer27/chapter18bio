@@ -6,6 +6,7 @@ import { buildChoreo } from './dom/choreo'
 import { buildType } from './dom/type'
 import { buildLesson } from './dom/lesson'
 import { buildCursor } from './dom/cursor'
+import { buildQuiz } from './dom/quiz'
 
 /* Surface anything that escapes the render loop: a throw inside rAF would
    otherwise just freeze the film silently. */
@@ -32,6 +33,7 @@ async function boot() {
   const choreo = buildChoreo()
   const lesson = buildLesson()
   const cursor = buildCursor()
+  buildQuiz()
 
   let engine: import('./gl/engine').Engine | null = null
   let labels: (() => void) | null = null

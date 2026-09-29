@@ -44,7 +44,8 @@ The pixel ratio drops automatically if frames get slow.
 
 Throughout:
 
-- **Predict.** Eleven questions (several are the book's own Concept Checks) ask you to tap an answer before the scene shows it; your score sits in the top bar.
+- **Questions along the way.** Thirty tap-to-answer questions inside the film: *Predict* before a scene shows the answer, *Check* right after something is taught (several are the book's own Concept Checks). Correct answers are spread evenly across A, B and C. A running score sits in the top bar.
+- **Final quiz.** Twenty four-option questions after the film, covering 18.1–18.6 and weighted toward 18.4–18.6. Each explains itself as soon as you answer; the result shows your score by section with a link back into the film for anything missed. The answer key is balanced (five each of A–D), and *Retake* reshuffles it into a new, still-balanced order.
 - **Key terms.** Bold terms light up in reading order and light up the thing they name.
 - **Takeaways.** Each chapter ends on three lines that assemble out of the scene.
 - **Field notes.** *Ciona robusta* makes guest appearances where it illustrates the chapter (for the Di Gregorio lab).
